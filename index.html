@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuyFelishasBundles | Discount Deals</title>
   <style>
     body {
@@ -19,7 +19,7 @@
       text-align: center;
     }
     header img {
-      width: 180px;
+      width: 160px;
       max-width: 100%;
       margin-bottom: 0.8rem;
     }
@@ -31,42 +31,45 @@
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.08);
     }
-    .bundle {
-      margin-bottom: 2.5rem;
-    }
-    .double-img {
+    .bundle-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: space-between;
+      gap: 2rem;
+      justify-content: center;
     }
-    .double-img div {
-      width: 48%;
-      background: #f9f4ff;
-      padding: 1rem;
+    .bundle-card {
+      width: 280px;
+      background: #fdfdfd;
+      border: 1px solid #eee;
       border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
     }
-    .double-img img {
+    .bundle-card img {
       width: 100%;
-      border-radius: 10px;
-      margin-bottom: 0.5rem;
+      height: auto;
+      display: block;
     }
-    .price {
-      font-weight: bold;
-      color: green;
+    .bundle-card h3 {
+      margin: 0.5rem;
+      color: #b57edc;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 0.5rem;
+    .bundle-card p {
+      padding: 0 0.8rem;
+      font-size: 0.9rem;
+    }
+    .bundle-card button {
+      margin: 1rem;
       padding: 0.5rem 1rem;
       background: #b57edc;
       color: white;
-      text-decoration: none;
-      border-radius: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     .qr {
       display: block;
-      margin: 2rem auto;
+      margin: 2rem auto 1rem;
       width: 160px;
     }
     footer {
@@ -75,20 +78,21 @@
       padding: 2rem;
       color: #777;
     }
-    h2 {
-      color: #b57edc;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #b57edc;
-      color: white;
+    .order-instructions {
+      margin-top: 3rem;
       padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      z-index: 9999;
+      background: #f0e6f7;
+      border-left: 4px solid #b57edc;
+    }
+    .order-instructions h4 {
+      margin-top: 0;
+    }
+    a.form-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #b57edc;
+      font-weight: bold;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -96,54 +100,65 @@
 
 <header>
   <img src="buyfelishasbundles-logo.png" alt="BuyFelishasBundles Logo" />
-  <h1>Bundle Deals Just for You! 🎁</h1>
+  <h1>Bundle Deals Just for You! 🏱</h1>
   <p>Because your glow starts with clean ✨</p>
 </header>
 
 <section>
-  <div class="bundle">
-    <h2>Bundle 2–7 Highlights</h2>
-    <div class="double-img">
-      <div>
-        <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 2" />
-        <p style="text-align:center;"><strong>Everyday Essentials</strong><br>Great for daily laundry and kitchen care. A simple combo of fresh-scented cleaners and paper products to keep your space stocked.</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
-      <div>
-        <img src="d6ca81f532c3413e89a0f1d3ddedca36~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 3" />
-        <p style="text-align:center;"><strong>Premium Household Pack</strong><br>Includes name-brand softeners, detergents, and cleaning sprays to refresh every corner of your home.</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
-      <div>
-        <img src="fcf1228b8ee04f0f9f9d0444b09e7676~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 4" />
-        <p style="text-align:center;"><strong>His & Hers Bundle</strong><br>A perfectly balanced mix of personal care and household must-haves for couples or families.</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
-      <div>
-        <img src="bundle3.png" alt="Bundle 5" />
-        <p style="text-align:center;"><strong>Budget Blessings Pack</strong><br>Affordable, essential cleaning and hygiene items — ideal for students, small families, or gifting.</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
-      <div>
-        <img src="bundle4.png" alt="Bundle 6" />
-        <p style="text-align:center;"><strong>Golden Glow Mystery</strong><br>11–14 surprise items. Each one chosen for quality, freshness, and value. Mystery meets magic!</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
-      <div>
-        <img src="bundle5.png" alt="Bundle 7" />
-        <p style="text-align:center;"><strong>Mini Fresh Set</strong><br>A compact collection with 5–7 refreshing items. Small but mighty — perfect for quick gifting.</p>
-        <a href="#order" class="btn">Order This Bundle</a>
-      </div>
+  <h2 style="text-align:center; color:#b57edc">Bundle 2–7 Highlights</h2>
+  <div class="bundle-grid">
+
+    <div class="bundle-card">
+      <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Everyday Essentials" />
+      <h3>Bundle 2</h3>
+      <p>Great for daily laundry and kitchen care. Includes Tide Simply, Charmin Essentials, Scott Paper Towels, Suavitel, Bounce & more.</p>
+      <button>Order This Bundle</button>
     </div>
+
+    <div class="bundle-card">
+      <img src="a11a22f4593c414d9e9230d43134bcad~tplv-omjb5zjo8w-origin-jpeg (1).jpeg" alt="Premium Household Pack" />
+      <h3>Bundle 3</h3>
+      <p>Name-brand softeners, Gain, Febreze, Snuggle, Charmin, & kitchen must-haves for full-home freshness.</p>
+      <button>Order This Bundle</button>
+    </div>
+
+    <div class="bundle-card">
+      <img src="9600211cbe294dd1aea7361e76158723~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="His & Hers Bundle" />
+      <h3>Bundle 4</h3>
+      <p>Persil, Lysol, Angel Soft, and Scott Paper with personal care combos perfect for couples or family homes.</p>
+      <button>Order This Bundle</button>
+    </div>
+
+    <div class="bundle-card">
+      <img src="3162417772564b2bb229da67f471419c~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Budget Blessings Pack" />
+      <h3>Bundle 5</h3>
+      <p>Budget-friendly freshness with Tide, Snuggle, Scott, and Angel Soft. Ideal for students or small households.</p>
+      <button>Order This Bundle</button>
+    </div>
+
+    <div class="bundle-card">
+      <img src="fresh_bundle_photo.jpg" alt="Golden Glow Mystery" />
+      <h3>Bundle 6</h3>
+      <p>A surprise of 11–14 top items! Scott, Tide, Downy, Dawn and more selected for quality and value.</p>
+      <button>Order This Bundle</button>
+    </div>
+
+    <div class="bundle-card">
+      <img src="Ultimate Home & Hygiene. jpeg.jpeg" alt="Mini Fresh Set" />
+      <h3>Bundle 7</h3>
+      <p>5–7 refreshing, practical items in one powerful little set. Small but mighty — perfect for quick gifting!</p>
+      <button>Order This Bundle</button>
+    </div>
+
   </div>
 
-  <div class="bundle">
-    <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
-    <h3>Order Instructions 📝</h3>
+  <div class="order-instructions">
+    <img src="cashapp-qr.png" class="qr" alt="Cash App QR Code" />
+    <h4>Order Instructions 📝</h4>
     <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
     <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
     <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
-    <p><a href="https://forms.gle/exampleform" target="_blank" class="btn">📋 Fill Out Order Form</a></p>
+    <a href="https://forms.gle/exampleform" class="form-link">📋 Fill Out Order Form</a>
   </div>
 </section>
 
@@ -151,18 +166,6 @@
   &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor 💜<br>
   Follow us on TikTok: <strong>@buyfelishasbundles</strong>
 </footer>
-
-<div id="popup" class="popup">
-  💖 Thanks for stopping by! Enjoyed your order? <a href="https://www.tiktok.com/@buyfelishasbundles" style="color: white; text-decoration: underline;">Leave a review on TikTok</a>!
-</div>
-
-<script>
-  window.onload = function() {
-    setTimeout(function() {
-      document.getElementById('popup').style.display = 'block';
-    }, 5000);
-  };
-</script>
 
 </body>
 </html>
