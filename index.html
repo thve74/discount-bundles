@@ -33,67 +33,43 @@
     }
     .bundle {
       margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
     }
     .bundle img {
       width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto 1rem;
       border-radius: 10px;
-      margin-bottom: 1rem;
     }
-    .price {
+    .bundle h3 {
+      color: #b57edc;
+      text-align: center;
+    }
+    .bundle p {
+      line-height: 1.6;
+    }
+    .order-button {
+      display: inline-block;
+      background-color: #b57edc;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      margin: 1rem auto 2rem;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
-      color: green;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: #999;
     }
     .qr {
       display: block;
       margin: 2rem auto;
-      width: 160px;
-    }
-    .double-img {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-    }
-    .double-img div {
-      flex: 1 1 calc(50% - 1rem);
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-    .double-img button {
-      margin-top: 0.5rem;
-      background: #b57edc;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
+      width: 180px;
     }
     footer {
       text-align: center;
       font-size: 0.85rem;
       padding: 2rem;
       color: #777;
-    }
-    .faq, .testimonials {
-      margin-top: 3rem;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #fff8f5;
-      border: 1px solid #ddd;
-      padding: 1rem;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
     }
   </style>
 </head>
@@ -106,81 +82,59 @@
 </header>
 
 <section>
-  <h2>Bundle 2–7 Highlights</h2>
-  <div class="double-img">
-    <div>
-      <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 2" />
-      <h3>Everyday Essentials</h3>
-      <p>Great for daily laundry and kitchen care. Includes Tide Simply, Charmin Essentials, Scott Paper Towels, Suavitel, Bounce & more.</p>
-      <button>Order This Bundle</button>
-    </div>
-    <div>
-      <img src="a11a22f4593c414d9e9230d43134bcad~tplv-omjb5zjo8w-origin-jpeg (1).jpeg" alt="Bundle 3" />
-      <h3>Premium Household Pack</h3>
-      <p>Name-brand softeners, Gain, Febreze, Snuggle, Charmin, & kitchen must-haves for full-home freshness.</p>
-      <button>Order This Bundle</button>
-    </div>
-    <div>
-      <img src="9600211cbe294dd1aea7361e76158723~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 4" />
-      <h3>His & Hers Bundle</h3>
-      <p>Persil, Lysol, Angel Soft, and Scott Paper with personal care combos perfect for couples or family homes.</p>
-      <button>Order This Bundle</button>
-    </div>
-    <div>
-      <img src="3162417772564b2bb229da67f471419c~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 5" />
-      <h3>Budget Blessings Pack</h3>
-      <p>Budget-friendly freshness with Tide, Snuggle, Scott, and Angel Soft. Ideal for students or small households.</p>
-      <button>Order This Bundle</button>
-    </div>
-    <div>
-      <img src="ab7d2b9208254b788d589a7973e2e941~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 6" />
-      <h3>Golden Glow Mystery</h3>
-      <p>A surprise of 11–14 top items! Scott, Tide, Downy, Dawn and more selected for quality and value.</p>
-      <button>Order This Bundle</button>
-    </div>
-    <div>
-      <img src="fresh_bundle_photo.jpg" alt="Bundle 7" />
-      <h3>Mini Fresh Set</h3>
-      <p>5–7 refreshing, practical items in one powerful little set. Small but mighty — perfect for quick gifting!</p>
-      <button>Order This Bundle</button>
-    </div>
+  <div class="bundle">
+    <h3>🛒 Restock & Refresh Bundle (Bundle 8)</h3>
+    <img src="cfa510ee039d4d388fa947eb848d65f3~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Restock & Refresh Bundle" />
+    <p>✨ <strong>A full restock in one bundle — because we shop, so you don’t have to.</strong> ✨</p>
+    <p><strong>What’s Inside:</strong><br>
+      - 4x Purex Liquid Laundry Detergent (150 oz)<br>
+      - 1x Purex Crystals (15.5 oz)<br>
+      - 2x Scott Paper Towels (6-roll packs)<br>
+      - 1x Scott Toilet Paper (12 Mega Rolls)<br>
+      - 1x Lysol Disinfectant Spray<br>
+      - 1x Lysol Multi-Surface Cleaner<br>
+      - 1x Lysol Wipes 32–35 ct<br>
+      - 1x Suavitel Dryer Sheets (20-count)<br>
+      - BONUS: Toothbrushes + Crest Whitening Toothpaste<br>
+      - If pods are unavailable, we’ll sub or include a bonus 4-pack of Scott toilet paper
+    </p>
+    <p><strong>Why You’ll Love It:</strong><br>
+      - Saves a full trip to the store — delivered to your door<br>
+      - Carefully shrink-wrapped to avoid leaks or spills<br>
+      - Trusted name-brand items only — no off-brand fillers<br>
+      - A few surprise extras included to brighten your delivery ✨
+    </p>
+    <a href="#order" class="order-button">Order This Bundle</a>
   </div>
 
-  <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
-  <h3>Order Instructions 📝</h3>
-  <p>DM us on TikTok @buyfelishasbundles or text with your name and the bundle you want.</p>
-  <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
-  <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
-  <p>📋 <a href="https://forms.gle/exampleform" target="_blank">Fill Out Order Form</a></p>
-</section>
+  <div class="bundle">
+    <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
+    <h3>Order Instructions 📝</h3>
+    <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
+    <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
+    <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
+    <p><a href="https://forms.gle/exampleform" class="order-button">📋 Fill Out Order Form</a></p>
+  </div>
 
-<section class="testimonials">
-  <h3>What Customers Are Saying 💬</h3>
-  <p>"Everything smelled amazing and was packed beautifully!" – Tasha</p>
-  <p>"I’m obsessed with these bundles. Fast shipping & great value!" – Dee</p>
-</section>
+  <div class="bundle">
+    <h3>💬 What Customers Are Saying</h3>
+    <p>"Everything smelled amazing and was packed beautifully!" – Tasha</p>
+    <p>"I’m obsessed with these bundles. Fast shipping & great value!" – Dee</p>
+  </div>
 
-<section class="faq">
-  <h3>Frequently Asked Questions ❓</h3>
-  <p><strong>Q:</strong> How long does shipping take?<br><strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
-  <p><strong>Q:</strong> Can I return my order?<br><strong>A:</strong> No returns, but we’ll replace one item per order if there’s an issue.</p>
+  <div class="bundle">
+    <h3>❓ Frequently Asked Questions</h3>
+    <p><strong>Q:</strong> How long does shipping take?<br>
+    <strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
+    <p><strong>Q:</strong> Can I return my order?<br>
+    <strong>A:</strong> No returns, but we’ll replace one item per order if there’s an issue.</p>
+  </div>
 </section>
 
 <footer>
   &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor 💜<br>
-  Follow us on TikTok: <a href="https://vt.tiktok.com/ZTjxux4uB/?page=TikTokShop" target="_blank">@buyfelishasbundles</a>
+  Follow us on TikTok: <strong>@buyfelishasbundles</strong>
 </footer>
-
-<div class="popup" id="thankYouPopup">
-  <p>Thanks for stopping by! 🌈<br>
-  Love your bundle? <a href="https://vt.tiktok.com/ZTjxux4uB/?page=TikTokShop" target="_blank">Leave a review 💖</a></p>
-</div>
-
-<script>
-  setTimeout(() => {
-    document.getElementById('thankYouPopup').style.display = 'block';
-  }, 5000);
-</script>
 
 </body>
 </html>
