@@ -33,43 +33,45 @@
     }
     .bundle {
       margin-bottom: 2.5rem;
-      padding-bottom: 2rem;
     }
     .bundle img {
       width: 100%;
-      max-width: 600px;
-      display: block;
-      margin: 0 auto 1rem;
+      max-height: 420px;
+      object-fit: cover;
       border-radius: 10px;
+      margin-bottom: 1rem;
     }
-    .bundle h3 {
-      color: #b57edc;
-      text-align: center;
-    }
-    .bundle p {
-      line-height: 1.6;
-    }
-    .order-button {
-      display: inline-block;
-      background-color: #b57edc;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      margin: 1rem auto 2rem;
-      text-align: center;
-      border-radius: 5px;
-      text-decoration: none;
+    .price {
       font-weight: bold;
+      color: green;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
     }
     .qr {
       display: block;
       margin: 2rem auto;
-      width: 180px;
+      width: 160px;
+    }
+    .order-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #b57edc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
     }
     footer {
       text-align: center;
       font-size: 0.85rem;
       padding: 2rem;
       color: #777;
+    }
+    h2 {
+      color: #b57edc;
     }
   </style>
 </head>
@@ -83,9 +85,9 @@
 
 <section>
   <div class="bundle">
-    <h3>🛒 Restock & Refresh Bundle (Bundle 8)</h3>
+    <h2>🛒 Restock & Refresh Bundle (Bundle 8)</h2>
     <img src="cfa510ee039d4d388fa947eb848d65f3~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Restock & Refresh Bundle" />
-    <p>✨ <strong>A full restock in one bundle — because we shop, so you don’t have to.</strong> ✨</p>
+    <p><strong>✨ A full restock in one bundle — because we shop, so you don’t have to. ✨</strong></p>
     <p><strong>What’s Inside:</strong><br>
       - 4x Purex Liquid Laundry Detergent (150 oz)<br>
       - 1x Purex Crystals (15.5 oz)<br>
@@ -104,7 +106,7 @@
       - Trusted name-brand items only — no off-brand fillers<br>
       - A few surprise extras included to brighten your delivery ✨
     </p>
-    <a href="#order" class="order-button">Order This Bundle</a>
+    <a class="order-btn" href="https://vt.tiktok.com/ZTjxux4uB/?page=TikTokShop" target="_blank">Order This Bundle</a>
   </div>
 
   <div class="bundle">
@@ -113,7 +115,7 @@
     <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
     <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
     <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
-    <p><a href="https://forms.gle/exampleform" class="order-button">📋 Fill Out Order Form</a></p>
+    <p><a href="https://forms.gle/exampleform" target="_blank">📋 Fill Out Order Form</a></p>
   </div>
 
   <div class="bundle">
@@ -124,10 +126,8 @@
 
   <div class="bundle">
     <h3>❓ Frequently Asked Questions</h3>
-    <p><strong>Q:</strong> How long does shipping take?<br>
-    <strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
-    <p><strong>Q:</strong> Can I return my order?<br>
-    <strong>A:</strong> No returns, but we’ll replace one item per order if there’s an issue.</p>
+    <p><strong>Q: How long does shipping take?</strong><br>A: Orders ship within 1–3 business days via UPS or FedEx.</p>
+    <p><strong>Q: Can I return my order?</strong><br>A: No returns, but we’ll replace one item per order if there’s an issue.</p>
   </div>
 </section>
 
