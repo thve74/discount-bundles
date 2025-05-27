@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuyFelishasBundles | Discount Deals</title>
   <style>
     body {
@@ -15,30 +15,30 @@
     header {
       background: #b57edc;
       color: white;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     header img {
-      width: 200px;
-      display: block;
-      margin: 0 auto 0.5rem;
+      width: 180px;
+      max-width: 100%;
+      margin-bottom: 0.8rem;
     }
     section {
-      max-width: 900px;
+      max-width: 960px;
       margin: 2rem auto;
-      padding: 1rem;
+      padding: 1.5rem;
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
     }
     .bundle {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       border-bottom: 1px solid #eee;
-      padding-bottom: 1.5rem;
+      padding-bottom: 2rem;
     }
     .bundle img {
       width: 100%;
-      max-height: 400px;
+      max-height: 420px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 1rem;
@@ -56,11 +56,27 @@
       margin: 2rem auto;
       width: 200px;
     }
+    .double-img {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .double-img {
+        flex-direction: row;
+      }
+      .double-img img {
+        width: 48%;
+      }
+    }
     footer {
       text-align: center;
       font-size: 0.85rem;
       padding: 2rem;
       color: #777;
+    }
+    h2 {
+      color: #b57edc;
     }
   </style>
 </head>
@@ -80,10 +96,15 @@
     <p><span class="old-price">$87.00</span> <span class="price">Now $68.00</span></p>
   </div>
 
+  <div class="bundle double-img">
+    <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle Display" />
+    <img src="ab7d2b9208254b788d589a7973e2e941~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="More Bundle Options" />
+  </div>
+
   <div class="bundle">
     <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
     <h3>Order Instructions:</h3>
-    <p>DM us on TikTok @buyfelishasbundles or text with your name and the bundle you want.</p>
+    <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
     <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
     <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
   </div>
@@ -95,3 +116,5 @@
 
 </body>
 </html>
+
+
