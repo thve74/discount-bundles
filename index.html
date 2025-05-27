@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuyFelishasBundles | Discount Deals</title>
   <style>
     body {
@@ -33,27 +33,15 @@
     }
     .bundle {
       margin-bottom: 2.5rem;
+      border-bottom: 1px solid #eee;
       padding-bottom: 2rem;
     }
-    .bundle-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-between;
-    }
-    .bundle-box {
-      width: 48%;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .bundle-box img {
+    .bundle img {
       width: 100%;
-      height: auto;
+      max-height: 420px;
+      object-fit: cover;
       border-radius: 10px;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
     .price {
       font-weight: bold;
@@ -63,19 +51,28 @@
       text-decoration: line-through;
       color: #999;
     }
-    .button {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #b57edc;
-      color: white;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 10px;
-    }
     .qr {
       display: block;
       margin: 2rem auto;
       width: 200px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #b57edc;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .double-img {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    .double-img img {
+      width: 48%;
     }
     footer {
       text-align: center;
@@ -83,16 +80,13 @@
       padding: 2rem;
       color: #777;
     }
-    .faq, .testimonials, .social {
-      background: #f3eaff;
-      padding: 1rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-    }
     h2 {
       color: #b57edc;
     }
-    #thank-you-popup {
+    .faq, .testimonials {
+      margin-top: 3rem;
+    }
+    .popup {
       display: none;
       position: fixed;
       bottom: 20px;
@@ -100,13 +94,9 @@
       background: #b57edc;
       color: white;
       padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      animation: fadein 0.5s ease forwards;
-    }
-    @keyframes fadein {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      z-index: 9999;
     }
   </style>
 </head>
@@ -114,91 +104,66 @@
 
 <header>
   <img src="buyfelishasbundles-logo.png" alt="BuyFelishasBundles Logo" />
-  <h1>Bundle Deals Just for You!</h1>
+  <h1>Bundle Deals Just for You! 🎁</h1>
   <p>Because your glow starts with clean ✨</p>
 </header>
 
 <section>
-  <h2>Featured Bundle</h2>
-  <div class="bundle-box">
+  <div class="bundle">
     <img src="fresh_bundle_photo.jpg" alt="Ultimate Home & Hygiene Bundle" />
-    <h3>Ultimate Home & Hygiene Bundle</h3>
-    <p>Includes Purex pods, Downy softeners, Scott & Bounty paper goods, Secret & Axe, Colgate, and more!</p>
+    <h2>Ultimate Home & Hygiene Bundle 🧼</h2>
+    <p>Includes Tide Pods, Scott Paper Towels, Downy, and Dawn — everything you need to keep your home fresh and clean!</p>
     <p><span class="old-price">$87.00</span> <span class="price">Now $68.00</span></p>
-    <a class="button" href="https://cash.app/$BuyFelishasBundles" target="_blank">Order Now</a>
+    <a href="#order" class="btn">Order Now</a>
   </div>
-</section>
 
-<section>
-  <h2>More Bundle Options</h2>
-  <div class="bundle-row">
-    <div class="bundle-box">
-      <img src="bundle1.png" alt="Everyday Essentials">
-      <p>Everyday Essentials</p>
-    </div>
-    <div class="bundle-box">
-      <img src="bundle2.png" alt="Premium Household Pack">
-      <p>Premium Household Pack</p>
-    </div>
-    <div class="bundle-box">
-      <img src="bundle3.png" alt="His & Hers Bundle">
-      <p>His & Hers Bundle</p>
-    </div>
-    <div class="bundle-box">
-      <img src="bundle4.png" alt="Budget Blessings Pack">
-      <p>Budget Blessings Pack</p>
-    </div>
-    <div class="bundle-box">
-      <img src="bundle5.png" alt="Golden Glow Mystery">
-      <p>Golden Glow Mystery</p>
-    </div>
-    <div class="bundle-box">
-      <img src="bundle6.png" alt="Mini Fresh Set">
-      <p>Mini Fresh Set</p>
+  <div class="bundle">
+    <h2>More Bundle Options 🧺</h2>
+    <div class="double-img">
+      <img src="bundle1.jpeg" alt="Everyday Essentials Bundle" />
+      <img src="bundle2.jpeg" alt="Premium Household Pack" />
+      <img src="bundle3.jpeg" alt="His & Hers Bundle" />
+      <img src="bundle4.jpeg" alt="Budget Blessings Pack" />
+      <img src="bundle5.jpeg" alt="Golden Glow Mystery" />
+      <img src="bundle6.jpeg" alt="Mini Fresh Set" />
     </div>
   </div>
-</section>
 
-<section class="faq">
-  <h2>Frequently Asked Questions</h2>
-  <p><strong>Q:</strong> How long does shipping take?<br><strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
-  <p><strong>Q:</strong> Can I return my order?<br><strong>A:</strong> We don’t offer returns, but we’ll replace one item per order if there’s an issue.</p>
-</section>
+  <div class="bundle">
+    <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
+    <h3>Order Instructions 📝</h3>
+    <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
+    <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
+    <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
+    <p><a href="https://forms.gle/exampleform" target="_blank" class="btn">📋 Fill Out Order Form</a></p>
+  </div>
 
-<section class="testimonials">
-  <h2>What Customers Are Saying</h2>
-  <p>"Everything smelled amazing and was packed beautifully!" – Tasha</p>
-  <p>"I’m obsessed with these bundles. Fast shipping & great value!" – Dee</p>
-</section>
+  <div class="faq">
+    <h2>Frequently Asked Questions ❓</h2>
+    <p><strong>Q:</strong> How long does shipping take?<br><strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
+    <p><strong>Q:</strong> Can I return my order?<br><strong>A:</strong> We don’t offer returns, but we’ll replace one item per order if there’s an issue.</p>
+  </div>
 
-<section class="social">
-  <h2>Stay Connected</h2>
-  <p>Follow us on TikTok: <strong>@buyfelishasbundles</strong></p>
-  <p>Need help? <a href="https://forms.gle/exampleform" target="_blank">Fill out this form</a></p>
-</section>
-
-<section class="bundle">
-  <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
-  <h3>Order Instructions:</h3>
-  <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
-  <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
-  <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
+  <div class="testimonials">
+    <h2>What Customers Are Saying 💬</h2>
+    <p>"Everything smelled amazing and was packed beautifully!" – Tasha</p>
+    <p>"I’m obsessed with these bundles. Fast shipping & great value!" – Dee</p>
+  </div>
 </section>
 
 <footer>
-  &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor
+  &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor 💜<br>
+  Follow us on TikTok: <strong>@buyfelishasbundles</strong>
 </footer>
 
-<div id="thank-you-popup">
-  💜 Thank you for stopping by! ✨<br>
-  🛍️ We hope your bundle blesses your home.<br>
-  💬 <a href="https://www.tiktok.com/@buyfelishasbundles" style="color: white; text-decoration: underline;">Leave a Review on TikTok</a>
+<div id="popup" class="popup">
+  💖 Thanks for stopping by! Enjoyed your order? <a href="https://www.tiktok.com/@buyfelishasbundles" style="color: white; text-decoration: underline;">Leave a review on TikTok</a>!
 </div>
 
 <script>
-  window.onload = function () {
-    setTimeout(function () {
-      document.getElementById("thank-you-popup").style.display = "block";
+  window.onload = function() {
+    setTimeout(function() {
+      document.getElementById('popup').style.display = 'block';
     }, 5000);
   };
 </script>
