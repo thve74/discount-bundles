@@ -34,22 +34,19 @@
     .bundle {
       margin-bottom: 2.5rem;
     }
-    .bundle img {
-      width: 100%;
-      max-height: 420px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
     .double-img {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: space-between;
     }
-    .double-img img {
+    .double-img div {
       width: 48%;
+    }
+    .double-img img {
+      width: 100%;
       border-radius: 10px;
+      margin-bottom: 0.5rem;
     }
     .price {
       font-weight: bold;
@@ -82,9 +79,6 @@
     h2 {
       color: #b57edc;
     }
-    .faq, .testimonials {
-      margin-top: 3rem;
-    }
     .popup {
       display: none;
       position: fixed;
@@ -111,12 +105,30 @@
   <div class="bundle">
     <h2>Bundle 2–7 Highlights</h2>
     <div class="double-img">
-      <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 2">
-      <img src="d6ca81f532c3413e89a0f1d3ddedca36~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 3">
-      <img src="fcf1228b8ee04f0f9f9d0444b09e7676~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 4">
-      <img src="bundle3.png" alt="Bundle 5">
-      <img src="bundle4.png" alt="Bundle 6">
-      <img src="bundle5.png" alt="Bundle 7">
+      <div>
+        <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 2" />
+        <p style="text-align:center;">Everyday Essentials</p>
+      </div>
+      <div>
+        <img src="d6ca81f532c3413e89a0f1d3ddedca36~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 3" />
+        <p style="text-align:center;">Premium Household Pack</p>
+      </div>
+      <div>
+        <img src="fcf1228b8ee04f0f9f9d0444b09e7676~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 4" />
+        <p style="text-align:center;">His & Hers Bundle</p>
+      </div>
+      <div>
+        <img src="bundle3.png" alt="Bundle 5" />
+        <p style="text-align:center;">Budget Blessings Pack</p>
+      </div>
+      <div>
+        <img src="bundle4.png" alt="Bundle 6" />
+        <p style="text-align:center;">Golden Glow Mystery</p>
+      </div>
+      <div>
+        <img src="bundle5.png" alt="Bundle 7" />
+        <p style="text-align:center;">Mini Fresh Set</p>
+      </div>
     </div>
   </div>
 
