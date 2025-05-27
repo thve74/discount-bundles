@@ -92,6 +92,22 @@
     h2 {
       color: #b57edc;
     }
+    #thank-you-popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #b57edc;
+      color: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      animation: fadein 0.5s ease forwards;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
@@ -117,27 +133,27 @@
   <h2>More Bundle Options</h2>
   <div class="bundle-row">
     <div class="bundle-box">
-      <img src="Screenshot 2025-05-26 19.49.07.png" alt="Option 1">
+      <img src="bundle1.png" alt="Everyday Essentials">
       <p>Everyday Essentials</p>
     </div>
     <div class="bundle-box">
-      <img src="Screenshot 2025-05-26 19.48.48.png" alt="Option 2">
+      <img src="bundle2.png" alt="Premium Household Pack">
       <p>Premium Household Pack</p>
     </div>
     <div class="bundle-box">
-      <img src="Screenshot 2025-05-26 19.48.58.png" alt="Option 3">
+      <img src="bundle3.png" alt="His & Hers Bundle">
       <p>His & Hers Bundle</p>
     </div>
     <div class="bundle-box">
-      <img src="d65f6e23-410b-431f-966b-340f86d3adbb.png" alt="Option 4">
+      <img src="bundle4.png" alt="Budget Blessings Pack">
       <p>Budget Blessings Pack</p>
     </div>
     <div class="bundle-box">
-      <img src="1ba7fc07-279d-4b88-aae7-bd2a375eaca6.png" alt="Option 5">
+      <img src="bundle5.png" alt="Golden Glow Mystery">
       <p>Golden Glow Mystery</p>
     </div>
     <div class="bundle-box">
-      <img src="1dd75455-b6db-41db-baa4-7d1a5ca7f469.png" alt="Option 6">
+      <img src="bundle6.png" alt="Mini Fresh Set">
       <p>Mini Fresh Set</p>
     </div>
   </div>
@@ -158,7 +174,7 @@
 <section class="social">
   <h2>Stay Connected</h2>
   <p>Follow us on TikTok: <strong>@buyfelishasbundles</strong></p>
-  <p>Need help? <a href="https://forms.gle/your-google-form" target="_blank">Fill out this form</a></p>
+  <p>Need help? <a href="https://forms.gle/exampleform" target="_blank">Fill out this form</a></p>
 </section>
 
 <section class="bundle">
@@ -172,6 +188,20 @@
 <footer>
   &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor
 </footer>
+
+<div id="thank-you-popup">
+  💜 Thank you for stopping by! ✨<br>
+  🛍️ We hope your bundle blesses your home.<br>
+  💬 <a href="https://www.tiktok.com/@buyfelishasbundles" style="color: white; text-decoration: underline;">Leave a Review on TikTok</a>
+</div>
+
+<script>
+  window.onload = function () {
+    setTimeout(function () {
+      document.getElementById("thank-you-popup").style.display = "block";
+    }, 5000);
+  };
+</script>
 
 </body>
 </html>
