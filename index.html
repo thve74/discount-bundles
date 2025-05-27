@@ -19,7 +19,7 @@
       text-align: center;
     }
     header img {
-      width: 160px;
+      width: 180px;
       max-width: 100%;
       margin-bottom: 0.8rem;
     }
@@ -31,46 +31,49 @@
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.08);
     }
-    .bundle-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
+    .bundle {
+      margin-bottom: 2.5rem;
     }
-    .bundle-card {
-      width: 280px;
-      background: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    }
-    .bundle-card img {
+    .bundle img {
       width: 100%;
-      height: auto;
-      display: block;
+      border-radius: 10px;
+      margin-bottom: 1rem;
     }
-    .bundle-card h3 {
-      margin: 0.5rem;
-      color: #b57edc;
+    .price {
+      font-weight: bold;
+      color: green;
     }
-    .bundle-card p {
-      padding: 0 0.8rem;
-      font-size: 0.9rem;
-    }
-    .bundle-card button {
-      margin: 1rem;
-      padding: 0.5rem 1rem;
-      background: #b57edc;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+    .old-price {
+      text-decoration: line-through;
+      color: #999;
     }
     .qr {
       display: block;
-      margin: 2rem auto 1rem;
+      margin: 2rem auto;
       width: 160px;
+    }
+    .double-img {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .double-img div {
+      flex: 1 1 calc(50% - 1rem);
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .double-img button {
+      margin-top: 0.5rem;
+      background: #b57edc;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
     }
     footer {
       text-align: center;
@@ -78,21 +81,19 @@
       padding: 2rem;
       color: #777;
     }
-    .order-instructions {
+    .faq, .testimonials {
       margin-top: 3rem;
+    }
+    .popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #fff8f5;
+      border: 1px solid #ddd;
       padding: 1rem;
-      background: #f0e6f7;
-      border-left: 4px solid #b57edc;
-    }
-    .order-instructions h4 {
-      margin-top: 0;
-    }
-    a.form-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #b57edc;
-      font-weight: bold;
-      text-decoration: none;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -100,72 +101,86 @@
 
 <header>
   <img src="buyfelishasbundles-logo.png" alt="BuyFelishasBundles Logo" />
-  <h1>Bundle Deals Just for You! 🏱</h1>
+  <h1>Bundle Deals Just for You! 🎁</h1>
   <p>Because your glow starts with clean ✨</p>
 </header>
 
 <section>
-  <h2 style="text-align:center; color:#b57edc">Bundle 2–7 Highlights</h2>
-  <div class="bundle-grid">
-
-    <div class="bundle-card">
-      <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Everyday Essentials" />
-      <h3>Bundle 2</h3>
+  <h2>Bundle 2–7 Highlights</h2>
+  <div class="double-img">
+    <div>
+      <img src="cd0869da3fb44749a51958846f8aa552~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 2" />
+      <h3>Everyday Essentials</h3>
       <p>Great for daily laundry and kitchen care. Includes Tide Simply, Charmin Essentials, Scott Paper Towels, Suavitel, Bounce & more.</p>
       <button>Order This Bundle</button>
     </div>
-
-    <div class="bundle-card">
-      <img src="a11a22f4593c414d9e9230d43134bcad~tplv-omjb5zjo8w-origin-jpeg (1).jpeg" alt="Premium Household Pack" />
-      <h3>Bundle 3</h3>
+    <div>
+      <img src="a11a22f4593c414d9e9230d43134bcad~tplv-omjb5zjo8w-origin-jpeg (1).jpeg" alt="Bundle 3" />
+      <h3>Premium Household Pack</h3>
       <p>Name-brand softeners, Gain, Febreze, Snuggle, Charmin, & kitchen must-haves for full-home freshness.</p>
       <button>Order This Bundle</button>
     </div>
-
-    <div class="bundle-card">
-      <img src="9600211cbe294dd1aea7361e76158723~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="His & Hers Bundle" />
-      <h3>Bundle 4</h3>
+    <div>
+      <img src="9600211cbe294dd1aea7361e76158723~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 4" />
+      <h3>His & Hers Bundle</h3>
       <p>Persil, Lysol, Angel Soft, and Scott Paper with personal care combos perfect for couples or family homes.</p>
       <button>Order This Bundle</button>
     </div>
-
-    <div class="bundle-card">
-      <img src="3162417772564b2bb229da67f471419c~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Budget Blessings Pack" />
-      <h3>Bundle 5</h3>
+    <div>
+      <img src="3162417772564b2bb229da67f471419c~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 5" />
+      <h3>Budget Blessings Pack</h3>
       <p>Budget-friendly freshness with Tide, Snuggle, Scott, and Angel Soft. Ideal for students or small households.</p>
       <button>Order This Bundle</button>
     </div>
-
-    <div class="bundle-card">
-      <img src="fresh_bundle_photo.jpg" alt="Golden Glow Mystery" />
-      <h3>Bundle 6</h3>
+    <div>
+      <img src="ab7d2b9208254b788d589a7973e2e941~tplv-omjb5zjo8w-origin-jpeg.jpeg" alt="Bundle 6" />
+      <h3>Golden Glow Mystery</h3>
       <p>A surprise of 11–14 top items! Scott, Tide, Downy, Dawn and more selected for quality and value.</p>
       <button>Order This Bundle</button>
     </div>
-
-    <div class="bundle-card">
-      <img src="Ultimate Home & Hygiene. jpeg.jpeg" alt="Mini Fresh Set" />
-      <h3>Bundle 7</h3>
+    <div>
+      <img src="fresh_bundle_photo.jpg" alt="Bundle 7" />
+      <h3>Mini Fresh Set</h3>
       <p>5–7 refreshing, practical items in one powerful little set. Small but mighty — perfect for quick gifting!</p>
       <button>Order This Bundle</button>
     </div>
-
   </div>
 
-  <div class="order-instructions">
-    <img src="cashapp-qr.png" class="qr" alt="Cash App QR Code" />
-    <h4>Order Instructions 📝</h4>
-    <p>DM us on TikTok <strong>@buyfelishasbundles</strong> or text with your name and the bundle you want.</p>
-    <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
-    <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
-    <a href="https://forms.gle/exampleform" class="form-link">📋 Fill Out Order Form</a>
-  </div>
+  <img src="cashapp-qr.png" alt="Cash App QR Code" class="qr" />
+  <h3>Order Instructions 📝</h3>
+  <p>DM us on TikTok @buyfelishasbundles or text with your name and the bundle you want.</p>
+  <p>Use your order code as your Cash App note to <strong>$BuyFelishasBundles</strong>.</p>
+  <p><strong>Tracking:</strong> All bundles ship via UPS or FedEx. One replacement per order if needed. No returns.</p>
+  <p>📋 <a href="https://forms.gle/exampleform" target="_blank">Fill Out Order Form</a></p>
+</section>
+
+<section class="testimonials">
+  <h3>What Customers Are Saying 💬</h3>
+  <p>"Everything smelled amazing and was packed beautifully!" – Tasha</p>
+  <p>"I’m obsessed with these bundles. Fast shipping & great value!" – Dee</p>
+</section>
+
+<section class="faq">
+  <h3>Frequently Asked Questions ❓</h3>
+  <p><strong>Q:</strong> How long does shipping take?<br><strong>A:</strong> Orders ship within 1–3 business days via UPS or FedEx.</p>
+  <p><strong>Q:</strong> Can I return my order?<br><strong>A:</strong> No returns, but we’ll replace one item per order if there’s an issue.</p>
 </section>
 
 <footer>
   &copy; 2025 BuyFelishasBundles | Where Freshness Meets Favor 💜<br>
-  Follow us on TikTok: <strong>@buyfelishasbundles</strong>
+  Follow us on TikTok: <a href="https://vt.tiktok.com/ZTjxux4uB/?page=TikTokShop" target="_blank">@buyfelishasbundles</a>
 </footer>
+
+<div class="popup" id="thankYouPopup">
+  <p>Thanks for stopping by! 🌈<br>
+  Love your bundle? <a href="https://vt.tiktok.com/ZTjxux4uB/?page=TikTokShop" target="_blank">Leave a review 💖</a></p>
+</div>
+
+<script>
+  setTimeout(() => {
+    document.getElementById('thankYouPopup').style.display = 'block';
+  }, 5000);
+</script>
 
 </body>
 </html>
